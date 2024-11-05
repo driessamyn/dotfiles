@@ -25,17 +25,16 @@ clone_or_pull "https://github.com/zsh-users/zsh-syntax-highlighting" "${ZSH_CUST
 # # Powerlevel10k theme
 clone_or_pull "https://github.com/romkatv/powerlevel10k.git" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 
-# # Symlink zsh prefs
-rm $HOME/.zshrc
-ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
+# # Symlinks
+function set_symlink() {
+    rm $HOME/$1
+    ln -s $HOME/.dotfiles/$2/$1 $HOME/$1
+}
 
-# # Symlink vim prefs
-rm $HOME/.vimrc
-ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
-
-# # Symlink p10k config
-rm $HOME/.p10k.zsh
-ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
+set_symlink .zshrc shell
+set_symlink .vimrc shell
+set_symlink .p10k.zsh shell
+set_symlink .gitconfig git
 
 # # Install Homebrew and some packages
 if ! command -v brew 2>&1 >/dev/null
