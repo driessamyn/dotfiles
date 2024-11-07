@@ -58,7 +58,8 @@ brew_install_or_update jq
 brew_install_or_update gh
 brew tap SDKMAN/tap
 brew_install_or_update SDKMAN-cli
+brew_install orbstack
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
-echo 'All done!'
+echo 'Terminal setup done!'

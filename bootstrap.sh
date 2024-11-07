@@ -9,6 +9,7 @@ do
     echo '-----------------'
     echo 'Choose an option:'
     echo ' 1. Bootstrap terminal'
+    echo ' 2. Install apps'
     echo ' 0. Exit'
     read -p 'Answer: ' reply
 
@@ -16,6 +17,10 @@ do
         1)
             sudo -v
             source $HOME/.dotfiles/terminal.sh
+            ;;
+        2)
+            sudo -v
+            source $HOME/.dotfiles/apps.sh
             ;;
         0)
             break
