@@ -2,3 +2,6 @@
 [user]
 	name = Dries Samyn
 	email = 5557551+driessamyn@users.noreply.github.com
+	signingkey = 9894DEA673968664
+[commit]
+	gpgsign = true

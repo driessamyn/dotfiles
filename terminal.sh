@@ -36,6 +36,9 @@ set_symlink .vimrc shell
 set_symlink .p10k.zsh shell
 set_symlink .gitconfig git
 
+rm $HOME/.gnupg/gpg-agent.conf
+ln -s $HOME/.dotfiles/shell/.gnupg/gpg-agent.conf
+
 # # Install Homebrew and some packages
 if ! command -v brew 2>&1 >/dev/null
 then

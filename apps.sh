@@ -15,7 +15,10 @@ brew_install_or_update jq
 brew_install_or_update gh
 brew tap SDKMAN/tap
 brew_install_or_update SDKMAN-cli
+brew_install_or_update gnupg
+brew_install_or_update pinentry-mac
 brew_install_or_update orbstack
+
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
